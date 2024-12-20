@@ -1,0 +1,449 @@
+/* .navbar {
+    background-color: #333333;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #f39c12;
+}
+
+.navbar-nav .nav-link {
+    color: #ecf0f1;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f39c12;
+}
+
+/* Footer Styling */
+/*
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #333333;
+} 
+*/
+
+/* Global Styles */
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+}
+
+/* Header Styles */
+header h1 {
+    font-size: 3rem;
+}
+
+header p {
+    font-size: 1.3rem;
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 2rem;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer .list-inline-item {
+    margin-right: 1rem;
+}
+
+
+.subnavbarNav {
+    background-color: rgb(156, 153, 149);
+    color: #ffffff;
+}
+
+.subnavbarNav .navbar-nav {
+    margin-left: 0; /* Ensure no extra margin on the left */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.subnavbarNav .nav-item {
+    margin-right: 10px; /* Add some space between the items */
+}
+/* Custom Navbar */
+.custom-navbar {
+    background-color: #000; /* Black background */
+    position: sticky;
+    top: 0;
+    z-index: 1030; /* Ensure it stays on top of other elements */
+}
+
+.navbar-brand {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.navbar-nav .nav-link {
+    color: #FFFFFF;
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d1d1d1; /* Slightly lighter on hover */
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Styles for the banner */
+.banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh; /* Make the banner half the viewport height */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .container {
+    text-align: center;
+}
+
+.custom-navbar {
+    background-color: #030304;
+}
+
+.custom-navbar .navbar-brand {
+    margin-right: 50px; 
+}
+
+.custom-navbar .nav-item {
+    margin-left: 15px; 
+}
+
+.logo-img {
+    padding-left: 20px;
+    height: 65px; 
+    width: auto;
+}
+
+.text-black {
+    color: black;
+}
+
+
+
+/* Style for the event card images */
+.card-img-top {
+    width: 100%; /* Ensure the image spans the card's width */
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Crop the image to fit without distortion */
+}
+
+/* Optional: Add padding/margin to ensure consistent layout */
+.card {
+    min-height: 350px; /* Set a consistent minimum height for the cards */
+}
+
+
+
+
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between rows */
+    margin-top: 20px;
+}
+
+.event-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between title and buttons */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.event-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.event-details {
+    flex-grow: 1; /* Push buttons to the right */
+    display: flex;
+    flex-direction: column;
+}
+
+.event-title {
+    font-size: 18px;
+    margin: 0;
+}
+
+.event-category {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.event-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between Edit and Delete buttons */
+}
+
+.btn-eve {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: #f0ad4e;
+}
+
+.btn-delete {
+    background-color: #d9534f;
+}
+
+.delete-form {
+    margin: 0;
+}
+
+
+.btn-add {
+    background-color: #5cb85c;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styling for success messages */
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  /* Styling for error messages */
+  .error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Login Page Styles */
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.login-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    .login-container {
+        margin: 40px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Signup Page Styles */
+.signup-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.signup-heading {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.signup-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.signup-label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.signup-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.signup-input:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.25);
+}
+
+.signup-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    .signup-container {
+        margin: 40px 20px;
+    }
+}

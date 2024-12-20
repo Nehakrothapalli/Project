@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+
+    <!-- Header Navigation -->
+    <%- include('../partials/header') %>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h2 class="text-center">Edit Event</h2>
+        <div class="row mt-4">
+            <div class="col-md-8 mx-auto">
+                <form method="post" action="/events/<%= event.id %>/update" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="eventCategory">Category</label>
+                        <select class="form-control" id="eventCategory" name="category">
+                            <option value="AI" <%= event.category === 'AI' ? 'selected' : '' %>>AI</option>
+                            <option value="JavaScript" <%= event.category === 'JavaScript' ? 'selected' : '' %>>JavaScript</option>
+                            <option value="Web Development" <%= event.category === 'Web Development' ? 'selected' : '' %>>Web Development</option>
+                            <option value="Cybersecurity" <%= event.category === 'Cybersecurity' ? 'selected' : '' %>>Cybersecurity</option>
+                            <option value="Data Science" <%= event.category === 'Data Science' ? 'selected' : '' %>>Data Science</option>
+                            <option value="Cloud Computing" <%= event.category === 'Cloud Computing' ? 'selected' : '' %>>Cloud Computing</option>
+                            <option value="Blockchain" <%= event.category === 'Blockchain' ? 'selected' : '' %>>Blockchain</option>
+                            <option value="DevOps" <%= event.category === 'DevOps' ? 'selected' : '' %>>DevOps</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventName">Event Name</label>
+                        <input type="text" class="form-control" id="eventName" name="eventName" value="<%= event.eventName %>" placeholder="Enter event name">
+                    </div>
+                    <div class="form-group">
+                        <label for="eventHostName">Host Name</label>
+                        <input type="text" readonly class="form-control" id="eventHostName" name="host_name" value="<%= event.host_name.firstName %> <%= event.host_name.lastName %>" placeholder="Enter host name">
+                    </div>
+                    <div class="form-group">
+                        <label for="startdatetime">Event Starts</label>
+                        <input type="datetime-local" class="form-control" id="startdatetime" name="startdatetime" 
+                               value="<%= event.startdatetimeFormatted %>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="enddatetime">Event Ends</label>
+                        <input type="datetime-local" class="form-control" id="enddatetime" name="enddatetime" 
+                               value="<%= event.enddatetimeFormatted %>" required>
+                    </div>
+                                     
+                    <div class="form-group">
+                        <label for="eventLocation">Location</label>
+                        <input type="text" class="form-control" id="eventLocation" name="location" value="<%= event.location %>" placeholder="Enter event location">
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDescription">Description</label>
+                        <textarea class="form-control" id="eventDescription" name="description" rows="4" placeholder="Enter event description"><%= event.description %></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventImage">Event Image</label>
+                        <input type="file" class="form-control-file" id="eventImage" name="image">
+                        <p>Current Image: <img src="<%= event.eventImage %>" alt="<%= event.eventName %>" style="max-width: 100px; max-height: 100px;"></p>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-block">Update Event</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('../partials/footer') %>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

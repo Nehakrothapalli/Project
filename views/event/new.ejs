@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+
+    <!-- Header Navigation -->
+    <%- include('../partials/header') %>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h2 class="text-center">Create a New Event</h2>
+        <div class="row mt-4">
+            <div class="col-md-8 mx-auto">
+                <form method="post" action="/events/create" enctype="multipart/form-data" >
+                    <div class="form-group">
+                        <label for="eventCategory">Category</label>
+                        <select class="form-control" id="eventCategory" name="category">
+                            <option value="">Select a category</option>
+                            <option value="AI">AI</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Cybersecurity">Cybersecurity</option>
+                            <option value="Data Science">Data Science</option>
+                            <option value="Cloud Computing">Cloud Computing</option>
+                            <option value="Blockchain">Blockchain</option>
+                            <option value="DevOps">DevOps</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventName">Event Name</label>
+                        <input type="text" class="form-control" id="eventName" name="eventName" required placeholder="Enter event name">
+                    </div>
+                    <div class="form-group">
+                        <label for="eventName">Host Name</label>
+                        <input type="text" readonly value= "<%= user.firstName %> <%= user.lastName %>" class="form-control" id="eventHostName" name="host_name" required placeholder="Enter Host name">
+                    </div>
+                    <div class="form-group">
+                        <label for="startdatetime">Event Starts</label>
+                        <input type="datetime-local" class="form-control" id="startdatetime" required name="startdatetime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="enddatetime">Event Ends</label>
+                        <input type="datetime-local" class="form-control" id="enddatetime" required name="enddatetime" required>
+                    </div>                    
+                    <div class="form-group">
+                        <label for="eventLocation">Location</label>
+                        <input type="text" class="form-control" id="eventLocation" required name="location" placeholder="Enter event location">
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDescription">Description</label>
+                        <textarea class="form-control" id="eventDescription" required name="description" rows="4" placeholder="Enter event description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventImage">Event Image</label>
+                        <input type="file" class="form-control-file" required id="eventImage" name="image">
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-block">Create Event</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('../partials/footer') %>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+    
+    <body>
+        <%- include('partials/header') %>
+    
+        <div class="content">
+           
+            <h2>  <%= errStatus %> Error</h2> 
+           
+            <h4><%= errorMessage %></h4>
+            <p>It seems like you are lost. Please recheck the URL.</p>
+        </div>
+
+
+        <%- include('partials/footer') %>
+        
+    </body>
+</html>

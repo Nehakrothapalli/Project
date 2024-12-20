@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body>
+    <!-- Header Navigation -->
+    <%- include('../partials/header') %>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h2 class="text-center"><%= event.eventName %></h2>
+        <div class="row mt-4">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <!-- Event Image -->
+                    <img src="<%= event.eventImage %>" alt="<%= event.eventName %>" class="card-img-top">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Event Details</h5>
+                        <p>Category: <%= event.category %></p>
+                        <p>Host: <%= event.host_name.firstName %> <%= event.host_name.lastName %></p>
+                        <p>Start Date & Time: <%= new Date(event.startdatetime).toLocaleString() %></p>
+                        <p>End Date & Time: <%= new Date(event.enddatetime).toLocaleString() %></p>
+                        <p>Location: <%= event.location %></p>
+                        <p>Description: <%= event.description %></p>
+
+                        <!-- RSVP Section -->
+                        <div class="rsvp-section mt-4">
+                            <h5>RSVP</h5>
+                            <p>Current RSVPs (YES): <strong><%= rsvpCount %></strong></p>
+                            <form action="/events/<%= event._id %>/rsvp" method="POST" class="d-flex gap-2">
+                                <button type="submit" name="status" value="YES" class="btn btn-success">RSVP: YES</button>
+                                <button type="submit" name="status" value="NO" class="btn btn-danger">RSVP: NO</button>
+                                <button type="submit" name="status" value="MAYBE" class="btn btn-warning">RSVP: MAYBE</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('../partials/footer') %>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+    
+    <body>
+        <%- include('../partials/header') %>
+    
+        <div class="container">
+            <!-- User Info Section -->
+            <div class="profile-header">
+                <h1>Welcome, <%= user.firstName %></h1>
+            </div>
+ 
+            <!-- Hosted Events Section -->
+            <div class="events-list">
+                <% if (events.length > 0) { %>
+                    <% events.forEach(event => { %>
+                        <div class="event-row">
+                            <img src="<%= event.eventImage %>" alt="<%= event.eventName %>" class="event-image">
+                            <div class="event-details">
+                                <h3 class="event-title"><%= event.eventName %></h3>
+                                <p class="event-category"><%= event.category %></p>
+                            </div>
+                            <div class="event-actions">
+                                <a href="/events/<%= event._id %>/edit" class="btn btn-edit">Edit</a>
+                                <form action="/events/<%= event._id %>/delete" method="POST" class="delete-form">
+                                    <button type="submit" class="btn btn-delete">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    <% }); %>
+                <% } else { %>
+                    <p>You have not hosted any events yet.</p>
+                <% } %>
+            </div>
+            
+
+
+          <!-- RSVPed Events Section -->
+<div class="rsvped-events">
+    <h2>Your RSVPs</h2>
+    <% if (rsvps.length > 0) { %>
+        <% rsvps.forEach(rsvp => { %>
+            <div class="event-row">
+                <!-- Event Image -->
+                <img src="<%= rsvp.eventId.eventImage %>" alt="<%= rsvp.eventId.eventName %>" class="event-image">
+                
+                <!-- Event Details -->
+                <div class="event-details">
+                    <h3 class="event-title"><%= rsvp.eventId.eventName %></h3>
+                    <p class="event-category">Category: <%= rsvp.eventId.category %></p>
+                   
+                    <p class="rsvp-status">
+                        Your RSVP Status: <strong><%= rsvp.status %></strong>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    <% } else { %>
+        <p>You have not RSVPed to any events yet.</p>
+    <% } %>
+</div>
+            <!-- Add New Event Button -->
+            <div class="add-event">
+                <a href="/events/createpage" class="btn btn-add">Add New Event</a>
+            </div>
+   
+   
+        </div>
+
+
+        <%- include('../partials/footer') %>
+        
+    </body>
+</html>
