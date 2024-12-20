@@ -18,7 +18,7 @@ const app = express();
 //configure app
 let port = 3000;
 let host = 'localhost';
-let url = 'mongodb+srv://Cluster:YWFJVXNia25T@cluster.2lhlc.mongodb.net/project_nbad?retryWrites=true&w=majority&appName=Cluster';
+let url = mongodb+srv://nkrotha1:admin@cluster0.jkxdo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0;
 app.set('view engine', 'ejs');
 
 //connect to MongoDB
